@@ -1,0 +1,259 @@
+/*estilos generales*/
+@charset "UTF-8";
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1em 1.5em;
+  font-family: sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+p {
+  line-height: 25px;
+  padding: 0;
+  margin: 0;
+}
+i {
+  padding: 0 0.4em 0 0.1em;
+}
+/*fin de los estilos generales*/
+
+/*menu*/
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0.5em 0 0 0;
+  border-bottom: lightcoral 2px solid;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.menu {
+  display: none;
+  margin: 0 1em;
+  padding: 0;
+}
+
+#mostrar-menu,
+#mostrar-menu2,
+#mostrar-menu3,
+#mostrar-menu4 {
+  display: none;
+}
+
+label {
+  background-color: lightcoral;
+  display: block;
+  color: white;
+  padding-left: 1em;
+  line-height: 2.5;
+  cursor: pointer;
+}
+#mostrar-menu:checked ~ .menu {
+  display: block;
+}
+#mostrar-menu2:checked ~ .menu {
+  display: block;
+}
+#mostrar-menu3:checked ~ .menu {
+  display: block;
+}
+#mostrar-menu4:checked ~ .menu {
+  display: block;
+}
+
+/*fin del menu*/
+
+/*banner*/
+.banner {
+  width: 100wv;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5em;
+}
+/*fin del banner*/
+
+/*modal*/
+.modal {
+  background-color: black;
+  opacity: 75%;
+  margin: 0 1em;
+  position: fixed;
+  justify-content: center;
+  top: -105vh;
+  left: 0;
+}
+.modal .modal-description {
+  color: white;
+  padding: 5.5em 1em 0.5em;
+  text-align: center;
+}
+.modal .description {
+  color: white;
+  padding: 0 0 1em 0;
+}
+.super-modal label {
+  margin: 0.5em 0;
+}
+#abrir-modal,
+#cerrar-modal {
+  display: none;
+}
+
+#abrir-modal + label {
+  display: table;
+  line-height: 2;
+  padding: 0 1em;
+  margin: 0.5em 0;
+  transform: uppercase;
+  background: lightcoral;
+  margin: 0.5em auto;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#cerrar-modal + label {
+  position: fixed;
+  top: 11em;
+  right: 1.5em;
+  line-height: 2;
+  transform: uppercase;
+  background: transparent;
+  border: white solid 2px;
+  color: white;
+  padding: 0 0.5em;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 150;
+}
+
+#abrir-modal:checked ~ .modal {
+  transition: 2s;
+  top: 20vh;
+}
+#cerrar-modal:checked ~ .modal {
+  top: -105;
+  transition: 1s;
+}
+/*formulario*/
+form {
+  margin: 1em;
+  padding: 0.5em;
+  text-align: center;
+  border: black solid 1px;
+}
+
+form .description {
+  color: white;
+}
+
+form input {
+  margin: 0 0 1em 0;
+}
+/*fin del formulario*/
+/*fin del modal*/
+
+/*one*/
+.one .description {
+  margin-left: 6em;
+  line-height: 35px;
+}
+.one .description i {
+  font-size: 25px;
+}
+/*fin del one*/
+
+/*consultas*/
+
+.consulta {
+  margin: 1em;
+  background: #eee;
+  padding: 1em 1em 0;
+}
+
+.title-uno {
+  font-size: 20px;
+  line-height: 2.5;
+  margin: 0;
+  padding: 0 1em;
+  color: steelblue;
+  font-weight: bold;
+  border-bottom: steelblue solid 1px;
+}
+h3 {
+  font-size: 18px;
+}
+.description-uno {
+  padding: 0.8em 1em 0.8em;
+  margin: 0;
+  text-align: center;
+  line-height: 1.5;
+  display: none;
+}
+
+.consulta .title-uno:hover ~ .description-uno {
+  display: block;
+}
+
+.consul {
+  margin-top: 0;
+}
+
+.subtitle-trasto span {
+  display: block;
+  font-size: 18px;
+  text-align: left;
+  font-weight: bold;
+  padding: 0;
+  margin: 0.5em 0;
+  color: tomato;
+  cursor: pointer;
+}
+
+/*fin de las consultas*/
+
+/*contacto*/
+.contacto {
+  border: black solid 2px;
+  background: #eee;
+}
+.title-contact {
+  text-align: center;
+}
+.contacto a {
+  text-align: left;
+  margin: 0 0.5em;
+}
+.contacto input {
+  margin: 0 0 0.5em 0.5em;
+}
+textarea {
+  margin: 0 0 0 1em;
+}
+.boton {
+}
+/*fin de contactos*/
+
+/*footer*/
+.footer {
+  background-color: black;
+  color: white;
+  margin: 0.5em 0;
+  padding: 1em;
+}
+/*fin del footer*/
