@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="favicon2.png" type="image/x-icon" />
+    <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="style.css" />
     <script
       src="https://kit.fontawesome.com/83ef059c2f.js"
@@ -13,14 +14,31 @@
   </head>
   <body>
     <div class="header">
-      <div class="logo">
-        <img src="logo.png" />
+      <div class="suprema">
+        <div class="logo">
+          <img src="logo.png" />
+        </div>
+        <div class="main">
+          <nav class="menuu">
+            <input type="checkbox" id="mostrar-menu" />
+            <label for="mostrar-menu"><i class="fas fa-tasks"></i>Menu</label>
+            <ul class="menu">
+              <li class="menu-item"><a href="#inicio">Inicio</a></li>
+              <li class="menu-item"><a href="#nosotros">Nosotros</a></li>
+              <li class="menu-item"><a href="#consultas">Consultas</a></li>
+              <li class="menu-item"><a href="#contacto">Contacto</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
       <div class="super-modal">
         <input type="radio" name="modal" id="abrir-modal" />
-        <label for="abrir-modal">Contingencia Covid-19</label>
+        <label for="abrir-modal"
+          ><i class="fas fa-exclamation-triangle"></i> Contingencia
+          Covid-19</label
+        >
         <input type="radio" name="modal" id="cerrar-modal" />
-        <label for="cerrar-modal">X</label>
+        <label for="cerrar-modal"><i class="fas fa-times"></i></label>
 
         <div class="modal">
           <p class="modal-description">
@@ -33,10 +51,24 @@
               Completá el siguiente cuadro con tus datos para poder contactarte
               con nuestra red!
             </p>
-            <input type="text" name="name" value="Ingresá tu nombre" /><br />
-            <input type="text" name="mail" value="Ingresá tu Email" /><br />
-            <input type="text" name="asunto" value="Asunto" /><br />
-            <textarea name="descripcion" cols="25" rows="4"></textarea><br />
+            <input
+              type="text"
+              name="name"
+              placeholder="Ingresá tu nombre"
+            /><br />
+            <input
+              type="text"
+              name="mail"
+              placeholder="Ingresá tu Email"
+            /><br />
+            <input type="text" name="asunto" placeholder="Asunto" /><br />
+            <textarea
+              name="descripcion"
+              cols="25"
+              rows="4"
+              placeholder="En qué podemos ayudarte?"
+            ></textarea
+            ><br />
             <input type="button" value="Enviar" />
           </form>
         </div>
@@ -45,28 +77,26 @@
         <img src="https://picsum.photos/id/191/600/400" />
       </div>
     </div>
-    <div class="main">
-      <nav class="menuu">
-        <input type="checkbox" id="mostrar-menu" />
-        <label for="mostrar-menu"><i class="fas fa-tasks"></i>Menu</label>
-        <ul class="menu">
-          <li class="menu-item"><a href="#inicio">Inicio</a></li>
-          <li class="menu-item"><a href="#nosotros">Nosotros</a></li>
-          <li class="menu-item"><a href="#consultas">Consultas</a></li>
-          <li class="menu-item"><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
 
     <div class="one">
       <h1 class="one-title">encontrá al terapeuta que buscás</h1>
-      <p class="description">
-        <i class="fas fa-check-double"></i>Profesionales de la UBA
-      </p>
-      <p class="description">
-        <i class="fas fa-unlock-alt"></i>Seguridad y Confidencialidad
-      </p>
-      <p class="description"><i class="far fa-clock"></i>Turnos Inmediatos</p>
+      <div class="oneTwo">
+        <div class="oneTwoTwo">
+          <p class="description">
+            <i class="fas fa-check-double"></i>Profesionales de la UBA
+          </p>
+        </div>
+        <div class="oneTwoTwo">
+          <p class="description">
+            <i class="fas fa-unlock-alt"></i>Seguridad y Confidencialidad
+          </p>
+        </div>
+        <div class="oneTwoTwo">
+          <p class="description">
+            <i class="far fa-clock"></i>Turnos Inmediatos
+          </p>
+        </div>
+      </div>
     </div>
     <div class="nosotros" id="nosotros">
       <h2 class="subtitle">
@@ -85,90 +115,94 @@
         reconocimiento y prestigio dentro de la comunidad.
       </p>
     </div>
-    <div class="consulta" id="consultas">
-      <section class="consulta-description">
-        <div class="consul" id="trastorno1">
-          <h2 class="title-uno">Trastornos Psicosomáticos</h2>
-          <p class="description-uno">
-            Muchas veces el cuerpo es el territorio de expresión del malestar
-            anímico y de aquellos conflictos no verbalizados. Asma,
-            broncoespasmos, gastritis, úlceras, enuresis, encopresis, colitis
-            ulcerosa, colon irritable, vitiligo, psoriasis, alergias son las
-            modalidades de expresión física predilectas de los conflictos
-            emocionales. Es necesario abordar este tipo de manifestaciones junto
-            al profesional para que paulatinamente la expresión del malestar
-            migre del cuerpo a la palabra. Es importante destacar que esta
-            situación-problema tiene un gran componente de pensamientos
-            inconscientes por lo que es indispensable la ayuda de un terapeuta,
-            somos una unidad biopsicosocial.
-          </p>
-          <p class="description-uno">
-            También apuntalamos a pacientes que porten diagnósticos crónicos y a
-            sus familiares: lupus, diabetes, esclerosis múltiple, miastenia,
-            graves, etc. Desde psicólogos asociados creemos que el sufrimiento
-            físico impacta directamente en el estado anímico y de modo
-            reciproco.
-          </p>
-        </div>
-        <div class="consul" id="trastorno2">
-          <h2 class="title-uno">Disfunsiones Sexuales</h2>
-          <p class="description-uno">
-            En Psicólogos Asociados trabajamos con el paciente para que pueda
-            vivir una vida sexual plena y libre de prejuicios: Impotencia,
-            eyaculación precoz, frigidez, vaginismo, falta de deseo, dudas sobre
-            la identidad sexual, problemática en relación al tamaño y/o forma de
-            los órganos sexuales son algunos síntomas más frecuentes que
-            obstaculizan la satisfacción.
-          </p>
-        </div>
-        <div class="consul" id="trastorno3">
-          <h2 class="title-uno">Adicciones</h2>
-          <p class="description-uno">
-            La palabra adicción está vinculada a la falta de dicción, es decir,
-            de palabra. Lo que caracteriza la adicción es su modalidad
-            compulsiva de consumo de determinado objeto o conducta así como la
-            imposibilidad para frenarlo. De este modo puede haber adicción a
-            muchas cosas: desde el uso ininterrumpido del celular, drogas
-            legales o ilegales, alcohol y hasta algún tipo de relación puede
-            asumir el carácter de adictiva. Siempre se consume “por algo” o
-            “para algo” y cada paciente debe descubrir junto a su terapeuta
-            estos determinantes propios y únicos vinculados a su historia
-            singular. <br />
-            Es importante que cada paciente con ayuda de su terapeuta pueda
-            comenzar a poner en palabras su malestar y que poco a poco pueda
-            ubicar que situación-conflicto es la que se encuentra, que muchas
-            veces queda enmascarada detrás del consumo.
-          </p>
-          <p class="description-uno">
-            Si bien creemos que los grupos de ayuda mutua (por ejemplo AA o NA)
-            pueden colaborar en determinados casos la mejoría, no reemplazan una
-            terapia individual. En esta última se abordan los motivos
-            particulares en la historia del paciente junto a un profesional. Por
-            el contrario, los grupos son dirigidos por ex consumidores y se
-            trabaja de manera colectiva sin ahondar en las causas más
-            singulares.
-          </p>
-        </div>
-        <div class="consul" id="trastorno4">
-          <h2 class="title-uno">Trastorno Alimenticios</h2>
-          <p class="description-uno">
-            Bulimia, anorexia, obesidad son alguno de los trastornos más
-            conocidos dentro de estas consultas. A las causas individuales que
-            originan esta patología se le suma el “peso” de los estereotipos y
-            “modelos de belleza” impuestos por la sociedad actual. En Psicólogos
-            Asociados realizamos un abordaje integral de la patología afrontando
-            no solo la imagen corporal (muchas veces distorsionada) y la
-            historia singular del paciente sino decosntruyendo estereotipos e
-            imposiciones sociales.
-          </p>
-        </div>
-        <div class="consul" id="trastorno5">
-          <h2 class="title-uno">Trastorno Afectivos:</h2>
-          <p class="description-uno">
-            <a class="subtitle-trasto">
-              <span> Depresión</span>
-            </a>
-            <a class="description-trasto">
+    <div class="card tabs_container consultas" id="consultas">
+      <div class="tabs_control">
+        <a href="#info">Trastornos Psicosomaticos</a>
+        <a href="#details">Disfunsiones Sexuales</a>
+        <a href="#lorem">Adicciones</a>
+        <a href="#lore">Trastorno Alimenticios</a>
+        <a href="#lor"> Trastorno Afectivos</a>
+        <a href="#lo"> Trastorno Relacionales</a>
+      </div>
+      <div class="indicator"></div>
+      <div class="tabs">
+        <div class="container">
+          <div class="tab" id="info">
+            <p>
+              Muchas veces el cuerpo es el territorio de expresión del malestar
+              anímico y de aquellos conflictos no verbalizados. Asma,
+              broncoespasmos, gastritis, úlceras, enuresis, encopresis, colitis
+              ulcerosa, colon irritable, vitiligo, psoriasis, alergias son las
+              modalidades de expresión física predilectas de los conflictos
+              emocionales. Es necesario abordar este tipo de manifestaciones
+              junto al profesional para que paulatinamente la expresión del
+              malestar migre del cuerpo a la palabra. Es importante destacar que
+              esta situación-problema tiene un gran componente de pensamientos
+              inconscientes por lo que es indispensable la ayuda de un
+              terapeuta, somos una unidad biopsicosocial.
+            </p>
+            <p>
+              También apuntalamos a pacientes que porten diagnósticos crónicos y
+              a sus familiares: lupus, diabetes, esclerosis múltiple, miastenia,
+              graves, etc. Desde psicólogos asociados creemos que el sufrimiento
+              físico impacta directamente en el estado anímico y de modo
+              reciproco.
+            </p>
+          </div>
+          <div class="tab" id="details">
+            <p>
+              En Psicólogos Asociados trabajamos con el paciente para que pueda
+              vivir una vida sexual plena y libre de prejuicios: Impotencia,
+              eyaculación precoz, frigidez, vaginismo, falta de deseo, dudas
+              sobre la identidad sexual, problemática en relación al tamaño y/o
+              forma de los órganos sexuales son algunos síntomas más frecuentes
+              que obstaculizan la satisfacción.
+            </p>
+          </div>
+          <div class="tab" id="lorem">
+            <p>
+              La palabra adicción está vinculada a la falta de dicción, es
+              decir, de palabra. Lo que caracteriza la adicción es su modalidad
+              compulsiva de consumo de determinado objeto o conducta así como la
+              imposibilidad para frenarlo. De este modo puede haber adicción a
+              muchas cosas: desde el uso ininterrumpido del celular, drogas
+              legales o ilegales, alcohol y hasta algún tipo de relación puede
+              asumir el carácter de adictiva. Siempre se consume “por algo” o
+              “para algo” y cada paciente debe descubrir junto a su terapeuta
+              estos determinantes propios y únicos vinculados a su historia
+              singular.
+            </p>
+            <p>
+              Es importante que cada paciente con ayuda de su terapeuta pueda
+              comenzar a poner en palabras su malestar y que poco a poco pueda
+              ubicar que situación-conflicto es la que se encuentra, que muchas
+              veces queda enmascarada detrás del consumo.
+            </p>
+            <p>
+              Si bien creemos que los grupos de ayuda mutua (por ejemplo AA o
+              NA) pueden colaborar en determinados casos la mejoría, no
+              reemplazan una terapia individual. En esta última se abordan los
+              motivos particulares en la historia del paciente junto a un
+              profesional. Por el contrario, los grupos son dirigidos por ex
+              consumidores y se trabaja de manera colectiva sin ahondar en las
+              causas más singulares.
+            </p>
+          </div>
+          <div class="tab" id="lore">
+            <p>
+              Bulimia, anorexia, obesidad son alguno de los trastornos más
+              conocidos dentro de estas consultas. A las causas individuales que
+              originan esta patología se le suma el “peso” de los estereotipos y
+              “modelos de belleza” impuestos por la sociedad actual. En
+              Psicólogos Asociados realizamos un abordaje integral de la
+              patología afrontando no solo la imagen corporal (muchas veces
+              distorsionada) y la historia singular del paciente sino
+              decosntruyendo estereotipos e imposiciones sociales.
+            </p>
+          </div>
+          <div class="tab" id="lor">
+            <p>
+              <a>Depresion</a>
               El sentido común nos hace asociar la palabra “Depresión” a:
               tristeza o llanto . No obstante, lo característico de esta
               patología es la ausencia de deseo. Cabe aclarar que cuando
@@ -183,120 +217,89 @@
               objetivos no se vivencia como una posibilidad, por el contrario
               rige la desesperanza. Como correlato también suele encontrarse
               afectada la capacidad de sentir placer.
-            </a>
-            <br />
-            <a class="subtitle-trasto">
-              <span> Fobias</span>
-            </a>
-            <a class="description-trasto">
-              La fobia se define como un temor excesivo a algún objeto (por
-              ejemplo araña) o situación (por ejemplo volar). El mecanismo de
-              formación de esta patología implica el desplazamiento de algún
-              conflicto emocional latente y su posterior anudamiento a un objeto
-              o situación particular.
-            </a>
-            <br />
-            <a class="subtitle-trasto">
-              <span> Ataque de Pánico / Ansiedad</span>
-            </a>
-            <a class="description-trasto">
-              En los últimos años se acrecentaron exponencialmente las consultas
-              por “ataque de pánico”, diagnóstico que ha invadido la jerga
-              cotidiana. ¿Quién no conoce a alguien o ha sufrido en carne propia
-              alguna de estas crisis? Es importante que sepamos que cada época
-              produce un modo de enfermar específico ligada al contexto. La
-              sociedad moderna tiene como denominador común la falta de tiempo,
-              corremos de acá para allá, estamos tapados de muchísimas
-              responsabilidades a las que queremos responder en su totalidad, en
-              esta vorágine vamos acumulando progresivamente stress y
-              preocupaciones. Nos sentimos cada vez más presionados. El famoso
-              “ataque de pánico” se caracteriza por presentar alguno (o todos)
-              de estos síntomas: dificultad para respirar, palpitaciones,
-              sudoración en las manos, dolor de estómago, de cabeza, sensación
-              de irrealidad, sensación de muerte inminente o de que se puede
-              perder la cordura. Es el sentimiento de una pérdida de control
-              física y/o psíquica.
-            </a>
-            <br />
-            <a class="subtitle-trasto">
-              <span> Tristeza</span>
-            </a>
-            <a class="description-trasto">
-              Sostenemos que se debe marcar una diferencia entre la depresión y
-              la pena que provocan situaciones difíciles de soportar tales como
-              rupturas, muertes, exilios. La congoja y la tristeza son las
-              respuestas habituales del sujeto ante la pérdida. <br />
+            </p>
+            <p>
+              <a> Fobias</a>La fobia se define como un temor excesivo a algún
+              objeto (por ejemplo araña) o situación (por ejemplo volar). El
+              mecanismo de formación de esta patología implica el desplazamiento
+              de algún conflicto emocional latente y su posterior anudamiento a
+              un objeto o situación particular.
+            </p>
+            <p>
+              <a>Ataque de Pánico / Ansiedad</a> En los últimos años se
+              acrecentaron exponencialmente las consultas por “ataque de
+              pánico”, diagnóstico que ha invadido la jerga cotidiana. ¿Quién no
+              conoce a alguien o ha sufrido en carne propia alguna de estas
+              crisis? Es importante que sepamos que cada época produce un modo
+              de enfermar específico ligada al contexto. La sociedad moderna
+              tiene como denominador común la falta de tiempo, corremos de acá
+              para allá, estamos tapados de muchísimas responsabilidades a las
+              que queremos responder en su totalidad, en esta vorágine vamos
+              acumulando progresivamente stress y preocupaciones. Nos sentimos
+              cada vez más presionados. El famoso “ataque de pánico” se
+              caracteriza por presentar alguno (o todos) de estos síntomas:
+              dificultad para respirar, palpitaciones, sudoración en las manos,
+              dolor de estómago, de cabeza, sensación de irrealidad, sensación
+              de muerte inminente o de que se puede perder la cordura. Es el
+              sentimiento de una pérdida de control física y/o psíquica.
+            </p>
+            <p>
+              <a>Tristeza</a>Sostenemos que se debe marcar una diferencia entre
+              la depresión y la pena que provocan situaciones difíciles de
+              soportar tales como rupturas, muertes, exilios. La congoja y la
+              tristeza son las respuestas habituales del sujeto ante la pérdida.
+              <br />
               La depresión por el contrario es un estado que se prolonga en el
               tiempo y quien la sufre tiene la sensación de arrastrarse con un
               peso insoportable. La tristeza es un sentimiento o estado de ánimo
               en si mismo, no puede ser considerada un síntoma.
-            </a>
-          </p>
-        </div>
-        <div class="consul" id="trastorno6">
-          <h2 class="title-uno">Trastorno Relacionales:</h2>
-          <p class="description-uno">
-            <a class="subtitle-trasto">
-              <span> Familias</span>
-            </a>
-            <a class="description-trasto">
-              Podemos pensar una familia como un conjunto de relaciones, al
-              igual que una partida de ajedrez, cualquier cambio en alguno de
-              los miembros tiene un correlato en el resto del grupo. Muchas de
-              las situaciones-problemas actuales adquieren su mayor intensidad
-              dentro del seno familiar. Nuestra modalidad de abordaje será
-              diseñado en función a la especificidad de la familia e incluye
-              diferentes tipos de entrevistas tanto individuales como familiares
-              con los distintos miembros. Las dificultades en la comunicación,
-              los acuerdos y negociaciones de cualquier grupo social se ven
-              facilitados cuando un terapeuta puede mediatizar los intercambios.
-              Cabe aclarar que cuando hablamos de familia lo hacemos en el
-              sentido amplio del término refiriéndonos a uniones de hecho y no
-              necesariamente sanguíneas.
-            </a>
-            <br />
-            <a class="subtitle-trasto">
-              <span> Co-Parentalidades</span>
-            </a>
-            <a class="description-trasto">
-              Este tipo de terapia vincular trabaja con progenitores separados,
-              ex pareja, que comparten hijx/s en común y encuentran dificultades
-              para comunicarse: ponerse de acuerdo en pautas de crianza,
-              negociar régimen de visita, peleas frente a los niñxs, etc. Es
-              importante la intervención de un terapeuta que pueda mediatizar
-              los intercambios y posibilitar la construcción de acuerdos,
-              negociaciones y acciones cooperativas para el pleno desarrollo de
-              los hijxs. Cabe destacar que si bien el trabajo se realiza con los
-              padres el foco es el bienestar del niñx. Los conflictos parentales
-              siempre influyen en estas psiquis en formación que necesitan de un
-              ambiente estable y afectuoso que los apuntales para su pleno
-              desarrollo.
-            </a>
-            <br />
-            <a class="subtitle-trasto">
-              <span> Re-Vinculaciones Familiares</span>
-            </a>
-            <a class="description-trasto">
-              Implica trabajar en el rearmado de lazos entre el niñx y aquel
-              familiar que por diversos motivos estuvo incomunicado o alejado de
-              su vida. Generalmente este dispositivo se implementa en un
-              intercambio reciproco y constante con el juzgado de familia que
-              indica la restitución del lazo. El motivo más común de consulta es
-              el síndrome de alienación parental que implica la negativa del
-              niñx o joven a vincularse con alguno de sus progenitores ya que se
-              ha identificado con el discurso del padre conviviente. Las
-              estrategias de abordaje son particulares en cada caso. No dudes en
-              consultar!
-            </a>
-            <br />
-            <a class="subtitle-trasto">
-              <span
-                >Parejas Perspectivas de Genero o Tratamientos
-                Individuales</span
-              >
-            </a>
-            <a class="description-trasto">
-              Cuando hablamos de “perspectiva de género” no solo hacemos
+            </p>
+          </div>
+          <div class="tab" id="lo">
+            <p>
+              <a>Familias</a>Podemos pensar una familia como un conjunto de
+              relaciones, al igual que una partida de ajedrez, cualquier cambio
+              en alguno de los miembros tiene un correlato en el resto del
+              grupo. Muchas de las situaciones-problemas actuales adquieren su
+              mayor intensidad dentro del seno familiar. Nuestra modalidad de
+              abordaje será diseñado en función a la especificidad de la familia
+              e incluye diferentes tipos de entrevistas tanto individuales como
+              familiares con los distintos miembros. Las dificultades en la
+              comunicación, los acuerdos y negociaciones de cualquier grupo
+              social se ven facilitados cuando un terapeuta puede mediatizar los
+              intercambios. Cabe aclarar que cuando hablamos de familia lo
+              hacemos en el sentido amplio del término refiriéndonos a uniones
+              de hecho y no necesariamente sanguíneas.
+            </p>
+            <p>
+              <a>Co-Parentalidades</a>Este tipo de terapia vincular trabaja con
+              progenitores separados, ex pareja, que comparten hijx/s en común y
+              encuentran dificultades para comunicarse: ponerse de acuerdo en
+              pautas de crianza, negociar régimen de visita, peleas frente a los
+              niñxs, etc. Es importante la intervención de un terapeuta que
+              pueda mediatizar los intercambios y posibilitar la construcción de
+              acuerdos, negociaciones y acciones cooperativas para el pleno
+              desarrollo de los hijxs. Cabe destacar que si bien el trabajo se
+              realiza con los padres el foco es el bienestar del niñx. Los
+              conflictos parentales siempre influyen en estas psiquis en
+              formación que necesitan de un ambiente estable y afectuoso que los
+              apuntales para su pleno desarrollo.
+            </p>
+            <p>
+              <a>Re-Vinculaciones Familiares</a>Implica trabajar en el rearmado
+              de lazos entre el niñx y aquel familiar que por diversos motivos
+              estuvo incomunicado o alejado de su vida. Generalmente este
+              dispositivo se implementa en un intercambio reciproco y constante
+              con el juzgado de familia que indica la restitución del lazo. El
+              motivo más común de consulta es el síndrome de alienación parental
+              que implica la negativa del niñx o joven a vincularse con alguno
+              de sus progenitores ya que se ha identificado con el discurso del
+              padre conviviente. Las estrategias de abordaje son particulares en
+              cada caso. No dudes en consultar!
+            </p>
+            <p>
+              <a>Parejas Perspectivas de Genero o Tratamientos Individuales</a
+              >Cuando hablamos de “perspectiva de género” no solo hacemos
               referencia a la atención de situaciones de violencia física sino,
               a aquellas de “maltrato afectivo” y de opresión entre géneros.
               <br />
@@ -310,22 +313,34 @@
               laboral, sino también en el amoroso y sexual. Los modos actuales
               de relacionarse se vinculan directamente con las nuevas
               herramientas tecnológicas.
-            </a>
-          </p>
+            </p>
+          </div>
         </div>
-      </section>
+      </div>
     </div>
+
     <div class="contacto" id="contacto">
       <h3 class="title-contact">Contactanos</h3>
-      <a href="#">Nombre: </a><input type="text" /><br />
-      <a href="#">Apellido: </a><input type="text" /><br />
-      <a href="#">Email: </a><input type="text" /><br />
-      <a href="#">Telefono: </a><input type="text" /><br />
-      <textarea name="descripcion" cols="25" rows="4"></textarea><br />
-      <input class="boton" type="button" value="Enviar" />
+      <div class="requisitos">
+        <input type="text" placeholder="Nombre" />
+        <input type="text" placeholder="Apellido" />
+        <input type="text" name="mail" placeholder="Email" />
+        <input type="text" placeholder="XX-XXXX-XXXX" />
+      </div>
+      <div class="area">
+        <textarea
+          placeholder="Escribe aqui tu consulta"
+          cols="25"
+          rows="4"
+        ></textarea>
+      </div>
+      <div class="btn">
+        <input class="boton" type="button" value="Enviar" />
+      </div>
     </div>
     <div class="footer">
-      &copy; by Fastly&Co, Web & Marketing Desing
+      &copy; By Fastly&Co, Web & Marketing Desing
     </div>
+    <script src="main.js"></script>
   </body>
 </html>

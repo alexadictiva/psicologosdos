@@ -5,10 +5,22 @@
 *:after {
   box-sizing: border-box;
 }
-
+:root {
+  --rojoCasi: #ff4b3b;
+  --rojoClaro: #ff6d66;
+  --rojoNoMucho: #e85143;
+  --rojoOscuro: #801913;
+  --letterColor: #ffe1db;
+  --black: black;
+  --botonColor: #e84343;
+  --footerColor: #806261;
+  --white: white;
+  --background: #ffffff;
+}
 body {
   margin: 1em 1.5em;
   font-family: sans-serif;
+  background-color: var(--background);
 }
 
 img {
@@ -30,6 +42,7 @@ p {
 i {
   padding: 0 0.4em 0 0.1em;
 }
+
 /*fin de los estilos generales*/
 
 /*menu*/
@@ -37,11 +50,14 @@ li {
   list-style: none;
   padding: 0;
   margin: 0.5em 0 0 0;
-  border-bottom: lightcoral 2px solid;
+  border-bottom: var(--rojoClaro) 2px solid;
 }
 a {
   text-decoration: none;
-  color: black;
+  color: var(--black);
+}
+.main {
+  margin-bottom: 1em;
 }
 .menu {
   display: none;
@@ -49,31 +65,19 @@ a {
   padding: 0;
 }
 
-#mostrar-menu,
-#mostrar-menu2,
-#mostrar-menu3,
-#mostrar-menu4 {
+#mostrar-menu {
   display: none;
 }
 
 label {
-  background-color: lightcoral;
+  background-color: var(--rojoOscuro);
   display: block;
-  color: white;
+  color: var(--letterColor);
   padding-left: 1em;
   line-height: 2.5;
   cursor: pointer;
 }
 #mostrar-menu:checked ~ .menu {
-  display: block;
-}
-#mostrar-menu2:checked ~ .menu {
-  display: block;
-}
-#mostrar-menu3:checked ~ .menu {
-  display: block;
-}
-#mostrar-menu4:checked ~ .menu {
   display: block;
 }
 
@@ -90,7 +94,7 @@ label {
 
 /*modal*/
 .modal {
-  background-color: black;
+  background-color: var(--black);
   opacity: 75%;
   margin: 0 1em;
   position: fixed;
@@ -99,12 +103,12 @@ label {
   left: 0;
 }
 .modal .modal-description {
-  color: white;
+  color: var(--letterColor);
   padding: 5.5em 1em 0.5em;
   text-align: center;
 }
 .modal .description {
-  color: white;
+  color: var(--letterColor);
   padding: 0 0 1em 0;
 }
 .super-modal label {
@@ -121,9 +125,9 @@ label {
   padding: 0 1em;
   margin: 0.5em 0;
   transform: uppercase;
-  background: lightcoral;
+  background: var(--rojoClaro);
   margin: 0.5em auto;
-  color: #fff;
+  color: var(--letterColor);
   border-radius: 10px;
   cursor: pointer;
 }
@@ -134,8 +138,7 @@ label {
   line-height: 2;
   transform: uppercase;
   background: transparent;
-  border: white solid 2px;
-  color: white;
+  color: var(--background);
   padding: 0 0.5em;
   border-radius: 10px;
   cursor: pointer;
@@ -155,11 +158,11 @@ form {
   margin: 1em;
   padding: 0.5em;
   text-align: center;
-  border: black solid 1px;
+  border: var(--black) solid 1px;
 }
 
 form .description {
-  color: white;
+  color: var(--letterColor);
 }
 
 form input {
@@ -170,90 +173,243 @@ form input {
 
 /*one*/
 .one .description {
-  margin-left: 6em;
-  line-height: 35px;
-}
-.one .description i {
-  font-size: 25px;
+  text-align: center;
+  line-height: 40px;
 }
 /*fin del one*/
 
-/*consultas*/
+/*consultas*/ /* ~ */
 
-.consulta {
-  margin: 1em;
-  background: #eee;
+.card {
+  margin: 1em 0.2em;
+  background: var(--rojoCasi);
   padding: 1em 1em 0;
 }
 
-.title-uno {
+.tabs_control a {
   font-size: 20px;
   line-height: 2.5;
   margin: 0;
   padding: 0 1em;
-  color: steelblue;
+  color: var(--letterColor);
   font-weight: bold;
-  border-bottom: steelblue solid 1px;
+  border-bottom: var(--rojoClaro) solid 1px;
 }
-h3 {
-  font-size: 18px;
+
+.tabs_control a {
+  display: block;
 }
-.description-uno {
-  padding: 0.8em 1em 0.8em;
-  margin: 0;
-  text-align: center;
-  line-height: 1.5;
+.tab {
+  margin: 1em auto;
   display: none;
+  color: var(--letterColor);
 }
-
-.consulta .title-uno:hover ~ .description-uno {
+.tab p a {
   display: block;
-}
-
-.consul {
-  margin-top: 0;
-}
-
-.subtitle-trasto span {
-  display: block;
-  font-size: 18px;
+  font-size: 17px;
   text-align: left;
   font-weight: bold;
   padding: 0;
   margin: 0.5em 0;
-  color: tomato;
+  color: var(--letterColor);
   cursor: pointer;
 }
 
 /*fin de las consultas*/
 
 /*contacto*/
+
 .contacto {
-  border: black solid 2px;
-  background: #eee;
+  border: var(--rojoClaro) solid 1px;
 }
 .title-contact {
   text-align: center;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
+.requisitos {
+  padding: 0.5em 3em;
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: 6fr;
+}
+.requisitos input {
+  margin-bottom: 1em;
+}
+
 .contacto a {
-  text-align: left;
-  margin: 0 0.5em;
+  margin-bottom: 0.3em;
 }
-.contacto input {
-  margin: 0 0 0.5em 0.5em;
+.area,
+.btn {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-textarea {
-  margin: 0 0 0 1em;
+.area {
+  margin-top: 0;
 }
-.boton {
+.btn input {
+  padding: 0.5em 1em;
+  border-radius: 25%;
+  margin-bottom: 1em;
+  background-color: var(--botonColor);
 }
+
 /*fin de contactos*/
 
 /*footer*/
 .footer {
-  background-color: black;
-  color: white;
+  background-color: var(--footerColor);
+  color: var(--letterColor);
   margin: 0.5em 0;
   padding: 1em;
+  text-align: center;
 }
 /*fin del footer*/
+
+@media screen and (min-width: 768px) {
+  /*tab cosulta*/
+  .indicator {
+    transition: all 0.2s;
+  }
+  .tabs_control a {
+    transition: 1s;
+  }
+  .tabs_control a:hover {
+    background-color: var(--rojoCasi);
+  }
+
+  .tabs {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .tabs .container {
+    white-space: nowrap;
+    left: 0;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+    height: 300px; /*esto hace q se acomode el tamanio del height*/
+  }
+
+  .tabs .container * {
+    white-space: normal;
+  }
+
+  .tab {
+    display: inline-block;
+    width: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+    vertical-align: top;
+    overflow-y: scroll;
+    margin-right: -4px;
+  }
+
+  .tab a {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+
+  .card {
+    background: var(--rojoClaro);
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+      0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    width: 95%;
+    margin: 1em auto;
+  }
+
+  .card .tabs_control {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0;
+  }
+
+  .tabs_control a {
+    flex-basis: 0;
+    flex-grow: 1;
+    padding: 8px;
+    border: solid 1px var(--background);
+    color: var(--letterColor);
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .tabs_control a:visited {
+    color: inherit;
+  }
+  /*fin del tab cosulta*/
+
+  /*contacto*/
+  .contacto {
+    border: var(--rojoClaro) solid 2px;
+  }
+  .title-contact {
+    margin-bottom: 1em;
+  }
+  .requisitos {
+    padding: 0 1em 0.5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .requisitos input {
+    margin-right: 2em;
+  }
+
+  .area textarea {
+    padding: 0;
+    margin: 0;
+    width: 80%;
+  }
+
+  /*fin del contacto*/
+}
+@media screen and (min-width: 960px) {
+  body {
+    margin: 2em 5em;
+  }
+  /*menu*/
+  .suprema {
+    display: flex;
+    margin: 0 2em;
+  }
+
+  .main {
+    margin: 0 0 1em 3em;
+    text-align: right;
+  }
+  .menuu label,
+  .menuu input {
+    display: none;
+  }
+  .menu {
+    display: inline-flex;
+    margin-top: 1em;
+    line-height: 2.5;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  .menu-item {
+    text-align: center;
+    padding: 0 1.5em;
+
+    border-right: var(--black) solid 2px;
+    border-bottom: 0;
+    background-color: var(--rojoClaro);
+  }
+  .menu-item a {
+    color: var(--white);
+  }
+
+  /*fin del menu*/
+}
+
+@media screen and (min-width: 1024px) {
+}
